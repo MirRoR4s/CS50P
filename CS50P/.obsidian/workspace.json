@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "76ccdad97ed68103",
+    "type": "split",
+    "children": [
+      {
+        "id": "953cf2de891917cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31efefa9b4bf62e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 8/装饰器.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "df25186816564f9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "854e248c605f733b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 8/装饰器.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "62795f2824c43a7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b53deb6a39d6df42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "659fec3b9148a3cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd0523af9af371ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "89acd31f39c36b74",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e245dc16232d2694",
+    "type": "split",
+    "children": [
+      {
+        "id": "5a2c98a94c7d8973",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc8c69a243f8a23e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lecture 8/装饰器.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "24cf69c495cd2128",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Lecture 8/装饰器.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0519087fdf4356de",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8f6edf12dc042e4f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lecture 8/装饰器.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "854e248c605f733b",
+  "lastOpenFiles": [
+    "Lecture 8/运算符重载.md",
+    "Lecture 8/装饰器.md",
+    "Lecture 8/类方法.md",
+    "Lecture 8/readme.md",
+    "Lecture 8",
+    "未命名"
+  ]
+}
