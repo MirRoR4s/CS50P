@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "eec62101fb959377",
+    "type": "split",
+    "children": [
+      {
+        "id": "f49ca28c53d72a34",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "deace756042f75b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS50P/Lecture 5/readme.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9e0611ddb7e18196",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cee9ab2687206ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8554b1621df46481",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3a2b503097b790b8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4aee14dc9289b540",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bde9eb47aa76f474",
+    "type": "split",
+    "children": [
+      {
+        "id": "156650895521092d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6a4c466baabc1ac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CS50P/Lecture 5/readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e772bd20cabe0c84",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CS50P/Lecture 5/readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a5525dcade460f49",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "069ef352521f1d5b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CS50P/Lecture 5/readme.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "deace756042f75b8",
+  "lastOpenFiles": [
+    "CS50P/Lecture 9/问题集.md",
+    "CS50P/Lecture 5/readme.md",
+    "CS50P/Lecture 5",
+    "CS50P/Lecture 8/raise.md",
+    "CS50P/Lecture 9",
+    "CS50P/Lecture 8/readme.md",
+    "README.md",
+    "CS50P/Lecture 8/类方法.md",
+    "CS50P/Lecture 8/运算符重载.md",
+    "CS50P/Lecture 8/装饰器.md",
+    "CS50P/Lecture 8/images",
+    "CS50P/Lecture 8/images/Pasted image 20231010193419.png"
+  ]
+}
