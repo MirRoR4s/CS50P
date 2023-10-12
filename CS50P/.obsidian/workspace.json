@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "953cf2de891917cf",
+        "id": "c18bd55a97b2d434",
         "type": "tabs",
         "children": [
           {
-            "id": "31efefa9b4bf62e3",
+            "id": "ec418a9bb891ece8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 8/装饰器.md",
+                "file": "Lecture 4/Problem Set 4.md",
                 "mode": "source",
                 "source": false
               }
@@ -22,16 +22,16 @@
         ]
       },
       {
-        "id": "df25186816564f9b",
+        "id": "26f6a4ad597a2b12",
         "type": "tabs",
         "children": [
           {
-            "id": "854e248c605f733b",
+            "id": "071a9d8028a3220f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 8/装饰器.md",
+                "file": "Lecture 4/学习心得.md",
                 "mode": "preview",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lecture 8/装饰器.md",
+                "file": "Lecture 4/Problem Set 4.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lecture 8/装饰器.md",
+                "file": "Lecture 4/Problem Set 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lecture 8/装饰器.md"
+                "file": "Lecture 4/Problem Set 4.md"
               }
             }
           }
@@ -152,8 +152,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,13 +164,29 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "854e248c605f733b",
+  "active": "ec418a9bb891ece8",
   "lastOpenFiles": [
-    "Lecture 8/运算符重载.md",
-    "Lecture 8/装饰器.md",
-    "Lecture 8/类方法.md",
+    "Lecture 4/学习心得.md",
+    "Lecture 4/Problem Set 4.md",
+    "Lecture 4/制作自己的库.md",
+    "Lecture 4/问题集",
+    "Lecture 9/常量.md",
+    "Lecture 9/解包.md",
+    "Lecture 9/类型提示.md",
+    "Lecture 9/问题集.md",
+    "Lecture 9/args和kwargs.md",
+    "Lecture 8/raise.md",
     "Lecture 8/readme.md",
-    "Lecture 8",
-    "未命名"
+    "Lecture 8/运算符重载.md",
+    "Lecture 4",
+    "Lecture 8/装饰器.md",
+    "Lecture 5/readme.md",
+    "Lecture 1",
+    "Lecture 8/类方法.md",
+    "Lecture 9",
+    "Lecture 8/images/Pasted image 20231010193419.png",
+    "Lecture 8/images",
+    "Lecture 5",
+    "Lecture 8"
   ]
 }

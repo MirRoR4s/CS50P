@@ -24,9 +24,10 @@ def get_student():
 if __name__ == "__main__":
     main()
 ```
-在上述代码中，调用构造函数时检查了是否提供了 name，以及 house 是否是一个有效的值。我们利用 **raise** 抛出了 ValueError 异常并打印了特定的错误消息。
+在上述代码中，调用构造函数时检查是否提供了 name，以及 house 是否是一个有效的值。我们利用 **raise** 抛出了 ValueError 异常并打印了特定的错误消息。
 
 python 允许我们编写特殊的函数来打印出类对象的属性，具体代码如下：
+
 ```python
 class Student:
     def __init__(self, name, house, patronus):
@@ -57,8 +58,10 @@ def get_student():
 if __name__ == "__main__":
     main()
 ```
-注意，通过实现上述的 `__str__` 方法，我们就可以利用 print 打印一个对象。更具体地说，是打印这个对象的属性，或者是你期望的和该对象相关联的东西，这取决于你对 `__str__` 方法的实现。
-- `__str__` 是 python 类的内置方法，不过我们当然也可以创建我们自己的方法。
+注意，通过实现上述的 `__str__` 方法，我们就可以利用 print 打印一个对象。更具体地说，是打印这个对象的属性，或者是你期望的和该对象相关联的东西，具体取决于你对 `__str__` 方法的实现。
+
+- `__str__` 是 python 类的内置方法
+
 ```python
 class Student:
     def __init__(self, name, house, patronus=None):
@@ -103,5 +106,6 @@ def get_student():
 if __name__ == "__main__":
     main()
 ```
-不同于字典，类有内置的函数，我们称之为方法。以上代码中我们实现了一个 `charm` 方法，该方法对于不同的 patronus 会返回不同的结果。同时也注意到 python 有直接处理 emojis 的能力！
+
+不同于字典，类中含有一些函数，我们称之为方法。以上代码中我们实现了一个 `charm` 方法，该方法对于不同的 patronus 会返回不同的结果。同时也注意到 python 有直接处理 emojis 的能力！
 ![[Pasted image 20231010193419.png]]
