@@ -1,4 +1,7 @@
 {
   "accentColor": "",
-  "baseFontSize": 26
+  "baseFontSize": 20,
+  "cssTheme": "",
+  "textFontFamily": "Microsoft YaHei",
+  "theme": "obsidian"
 }

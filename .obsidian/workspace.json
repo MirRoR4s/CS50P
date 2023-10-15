@@ -6,6 +6,7 @@
       {
         "id": "f49ca28c53d72a34",
         "type": "tabs",
+        "dimension": 59.09090909090909,
         "children": [
           {
             "id": "deace756042f75b8",
@@ -13,8 +14,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS50P/Lecture 5/readme.md",
+                "file": "CS50P/Lecture 9/常量.md",
                 "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0df1e633a046bb00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS50P/Lecture 6/readme.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "da0de1ed5211c300",
+        "type": "tabs",
+        "dimension": 40.909090909090914,
+        "children": [
+          {
+            "id": "e5737eeaf576837f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS50P/Lecture 4/学习心得.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS50P/Lecture 5/readme.md",
+                "file": "CS50P/Lecture 4/学习心得.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS50P/Lecture 5/readme.md",
+                "file": "CS50P/Lecture 4/学习心得.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +158,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS50P/Lecture 5/readme.md"
+                "file": "CS50P/Lecture 4/学习心得.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,15 +179,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "deace756042f75b8",
+  "active": "e5737eeaf576837f",
   "lastOpenFiles": [
-    "CS50P/Lecture 9/问题集.md",
+    "CS50P/Lecture 4/Problem Set 4.md",
+    "CS50P/Lecture 4/学习心得.md",
     "CS50P/Lecture 5/readme.md",
+    "CS50P/Lecture 5/问题集5.md",
+    "README.md",
+    "CS50P/Lecture 6/readme.md",
+    "CS50P/Lecture 9/常量.md",
+    "CS50P/Lecture 6",
+    "CS50P/Lecture 9/解包.md",
+    "CS50P/Lecture 9/类型提示.md",
+    "CS50P/Lecture 9/问题集.md",
+    "CS50P/Lecture 9/args和kwargs.md",
+    "CS50P/Lecture 5/images/Pasted image 20231015144729.png",
+    "CS50P/Lecture 5/images",
+    "Pasted image 20231015144649.png",
     "CS50P/Lecture 5",
     "CS50P/Lecture 8/raise.md",
     "CS50P/Lecture 9",
     "CS50P/Lecture 8/readme.md",
-    "README.md",
     "CS50P/Lecture 8/类方法.md",
     "CS50P/Lecture 8/运算符重载.md",
     "CS50P/Lecture 8/装饰器.md",

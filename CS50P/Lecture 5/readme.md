@@ -188,6 +188,11 @@ def test_assert():
 - 这里故意将乘法改成加法，人为制造错误方便测试。
     
 解决的办法就是编写多个测试函数，将不同的测试条件分别进行测试。
+- 注意，被测函数所属的文件如果在 main 函数中也调用了被测函数，那么不可言直接用 main() 调用 main 函数，而要改写成：
+    ```python
+        if __name__ == "__main__":
+        main()
+    ```
     
 ```python
     from calculator import square
