@@ -314,10 +314,11 @@ def is_even(n):
     return n % 2 == 0
 ```
 
-问题描述：写一个程序识别py文件中所含的代码行数。不是py文件或者文件不存在或是未指明文件路径都要通过sys.exit退出！
+问题描述：写一个程序识别 py 文件中所含的代码行数。不是 py 文件或文件不存在或未指明文件路径都要通过 `sys.exit` 退出！
   
 - 可以假设注释都以 \# 开头，前面可能会有空格。
 - 可以认为仅含空格的行则为空行。
+- 补充：空行可能什么也没有，就只有一个换行？
 
 ```python
 import sys
@@ -355,6 +356,7 @@ def main():
 
 
 def is_blank(line):
+
     if len(line) == 0:
         return True
 
@@ -372,7 +374,7 @@ main()
 
 ### Pizza Py
 
-**要求**：编写代码完成从Pinocchio’s format到 ASCII art  table formatted 的转换。
+**要求**：编写代码完成从 Pinocchio’s format 到 ASCII art  table formatted 的转换。
 
 - 难度不大，注意仔细看 tabulate 库文档，有一些小的使用问题。
 
@@ -383,8 +385,8 @@ import csv
 
 def main():
     table_list = []
-    headers1 = ["Sicilian Pizza", "Small", "Large"]
-    headers2 = ["Regular Pizza", "Small", "Large"]
+    # headers1 = ["Sicilian Pizza", "Small", "Large"]
+    # headers2 = ["Regular Pizza", "Small", "Large"]
     length = len(sys.argv)
 
     if length == 1:
@@ -404,11 +406,7 @@ def main():
                     table_list.append(row)
             
             print(tabulate(table_list, headers="firstrow", tablefmt="grid"))
-            
-            
-                
-                
-
+        
         except FileNotFoundError:
             sys.exit("File don't exist")
 
@@ -417,7 +415,11 @@ main()
 ```
 
 ### [Scourgify](https://cs50.harvard.edu/python/2022/psets/6/scourgify/#demo)
-同样的程序，但是在windows上输出的文件会多出一个空行，很奇怪。
+
+- 本题未通过测试
+
+
+同样的程序，但是在 windows 上输出的文件会多出一个空行，很奇怪。
 ```python
 import sys
 
@@ -461,14 +463,14 @@ main()
 ### [CS50 P-Shirt](https://cs50.harvard.edu/python/2022/psets/6/shirt/)
 
 - 接收两个命令行参数，第一个是输入图片名，第二个是输出图片名。
-- 用Image.open打开输入图片
-- 用ImageOps.fit调整和裁剪输入图片的大小（和 shirt.png 一样大）
-- 将shirt.png粘贴到输入图片中
-- 用Image.save保存覆盖结果
+- 用 `Image.open` 打开输入图片
+- 用 `ImageOps.fit` 调整和裁剪输入图片的大小（和 `shirt.png` 一样大）
+- 将 `shirt.png` 粘贴到调整后的图片中
+- 用 `Image.save` 保存覆盖结果
 
-不满足以下条件的，通过sys.exit退出：
+不满足以下条件的，通过 `sys.exit` 退出：
 - 两个命令行参数
-- 输入和输出文件必须以.jpg、.jpeg、.png结尾，大小写不敏感
+- 输入和输出文件必须以 .jpg、.jpeg、.png 结尾，大小写不敏感
 - 输入和输出文件的扩展名要相同
 - 输入文件必须要存在
 
@@ -502,11 +504,6 @@ def main():
         resize_input = ImageOps.fit(input, shirt_size)
         resize_input.paste(shirt, shirt)
         resize_input.save("test.png")
-        
-        
-        
-        
-        
         
     except FileNotFoundError:
         sys.exit("Invalid input")
