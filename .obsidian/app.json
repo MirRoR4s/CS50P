@@ -6,5 +6,8 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./images"
+  "attachmentFolderPath": "./images",
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "rightToLeft": false
 }

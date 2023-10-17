@@ -1,7 +1,7 @@
 {
-  "accentColor": "",
-  "baseFontSize": 20,
-  "cssTheme": "",
+  "accentColor": "#7357ff",
+  "baseFontSize": 21,
+  "cssTheme": "Shimmering Focus",
   "textFontFamily": "Microsoft YaHei",
   "theme": "obsidian"
 }

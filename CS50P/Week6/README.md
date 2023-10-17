@@ -286,6 +286,7 @@ images[0].save(
     loop=0
 )
 ```
+
 总结：
 
 gif 不一定看起来是动态的，至少本节课给出的两个 gif 看起来是静态的。猜测是由于这两个 gif 中只含有一张图片，所以循环播放也看不出来什么变化。但是，但我们利用上述程序将两个 gif 叠加成一个新的 gif 后，就可以明显看出来新的 gif 是动态的了。
@@ -301,6 +302,7 @@ gif 不一定看起来是动态的，至少本节课给出的两个 gif 看起�
 问：代码行数越多的程序就越复杂吗？
 
 答：不一定，还要看代码的可读性怎么样。比如如下代码
+
 ```python
 def is_even(n):
     if n % 2 == 0:
@@ -308,7 +310,9 @@ def is_even(n):
     else:
         return False
 ```
+
 明显没有下面这个代码复杂，尽管第一个的行数是第二个的两倍以上。
+
 ```python
 def is_even(n):
     return n % 2 == 0
@@ -385,8 +389,6 @@ import csv
 
 def main():
     table_list = []
-    # headers1 = ["Sicilian Pizza", "Small", "Large"]
-    # headers2 = ["Regular Pizza", "Small", "Large"]
     length = len(sys.argv)
 
     if length == 1:
@@ -418,12 +420,21 @@ main()
 
 - 本题未通过测试
 
+In a file called `scourgify.py`, implement a program that:
+
+- Expects the user to provide two command-line arguments:
+    - the name of an existing CSV file to read as input, whose columns are assumed to be, in order, `name` and `house`, and
+    - the name of a new CSV to write as output, whose columns should be, in order, `first`, `last`, and `house`.
+- Converts that input to that output, splitting each `name` into a `first` name and `last` name. Assume that each student will have both a first name and last name.
+
+If the user does not provide exactly two command-line arguments, or if the first cannot be read, the program should exit via `sys.exit` with an error message.
 
 同样的程序，但是在 windows 上输出的文件会多出一个空行，很奇怪。
+
 ```python
 import sys
-
 import csv
+
 
 def main():
     table = []
@@ -434,11 +445,13 @@ def main():
     elif length > 3:
         sys.exit("Too many command-line arguments")
     else:
+        # 输入 csv 文件名
         file_name = sys.argv[1]
+        # 输出 csv 文件名
         after_csv_file_name = sys.argv[2]
+        # 输入文件的扩展名必须是 csv
         if file_name.endswith("csv") is not True:
             sys.exit("Not a CSV file")
-        
         try:
             with open(file_name, "r") as file:
                 reader = csv.DictReader(file)
@@ -448,13 +461,11 @@ def main():
                     first, last = first.strip(), last.strip()
                     house = row['house']
                     table.append({"first": first, "last": last, "house": house})   
-            
             with open(after_csv_file_name, "w") as file1:
                 writer = csv.DictWriter(file1, fieldnames=["first", "last", "house"])
                 writer.writeheader()
                 for row in table:
                     writer.writerow(row)
-
         except FileNotFoundError:
             sys.exit("File don't exist")
 
@@ -487,27 +498,29 @@ def main():
         sys.exit("Too few command-line arguments")
     elif length > 3:
         sys.exit("Too many command-line arguments")
-    
     input_images = sys.argv[1]
     output_images = sys.argv[2]
-    
+    # 获取输入图片的扩展名
     input_ext = os.path.splitext(input_images)[-1]
+    # 获取输出图片的扩展名
     output_ext = os.path.splitext(output_images)[-1]
-
+    # 输入输出扩展名必须相同
     if input_ext != output_ext:
         sys.exit("Input and output have different extensions")
-
     try:
         shirt = Image.open("shirt.png")
-        shirt_size = shirt.size
         input = Image.open(input_images)
-        resize_input = ImageOps.fit(input, shirt_size)
-        resize_input.paste(shirt, shirt)
-        resize_input.save("test.png")
-        
     except FileNotFoundError:
         sys.exit("Invalid input")
-
+    else:
+        # 获取衬衣图片的大小
+        shirt_size = shirt.size
+        # 将输入图片裁剪到衬衣图片大小
+        resize_input = ImageOps.fit(input, shirt_size)
+        # 将衬衣图片复制到裁剪图片上
+        resize_input.paste(shirt, shirt)
+        # 保存复制结果图片
+        resize_input.save("test.png")
 
 
 if __name__ == "__main__":

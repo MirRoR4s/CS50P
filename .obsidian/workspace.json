@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS50P/Week3/problem-set.md",
+                "file": "CS50P/Week6/README.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bde9eb47aa76f474",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS50P/Week3/problem-set.md",
+                "file": "CS50P/Week6/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS50P/Week3/problem-set.md",
+                "file": "CS50P/Week6/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS50P/Week3/problem-set.md"
+                "file": "CS50P/Week6/README.md"
               }
             }
           }
@@ -134,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,6 +150,9 @@
   },
   "active": "e5737eeaf576837f",
   "lastOpenFiles": [
+    "CS50P/Week6/README.md",
+    "CS50P/Week6/costumes.gif",
+    "CS50P/Week3/problem-set.md",
     "CS50P/Week3/readme.md",
     "CS50P/Lecture 4/学习心得.md",
     "CS50P/Lecture 4/Problem Set 4.md",
