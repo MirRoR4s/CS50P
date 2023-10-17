@@ -6,6 +6,7 @@
       {
         "id": "e3e15c5163039994",
         "type": "tabs",
+        "dimension": 40.98765432098765,
         "children": [
           {
             "id": "d957a28e6629c862",
@@ -13,11 +14,49 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week4/readme.md",
+                "file": "Week4/Problem-Set-4.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
+          }
+        ]
+      },
+      {
+        "id": "b00dbbc4fc136937",
+        "type": "tabs",
+        "dimension": 44.382716049382715,
+        "children": [
+          {
+            "id": "f341ebc90e0c89fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Week4/Problem-Set-4.md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "896bab2e48292a3c"
+          }
+        ]
+      },
+      {
+        "id": "f8a9cc8a2d4718ea",
+        "type": "tabs",
+        "dimension": 14.629629629629628,
+        "children": [
+          {
+            "id": "3fefb42b7107ee87",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Week4/Problem-Set-4.md"
+              }
+            },
+            "group": "896bab2e48292a3c"
           }
         ]
       }
@@ -69,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "ccfc91d5b0973b29",
@@ -85,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week4/readme.md",
+                "file": "Week4/Problem-Set-4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week4/readme.md",
+                "file": "Week4/Problem-Set-4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week4/readme.md"
+                "file": "Week4/Problem-Set-4.md"
               }
             }
           }
@@ -147,5 +186,8 @@
     }
   },
   "active": "d957a28e6629c862",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Week4/readme.md",
+    "Week4/Problem-Set-4.md"
+  ]
 }
