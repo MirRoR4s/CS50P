@@ -276,7 +276,7 @@
 
 ## [Case Sensitivity](https://cs50.harvard.edu/python/2022/notes/7/#case-sensitivity)
 
-- To illustrate how you might address issues around case sensitivity, where there is a difference between `EDU` and `edu` and the like, let’s rewind our code to the following:
+- To illustrate how you might address issues around case sensitivity, where there is a difference between `EDU` and `edu` and the like, let’s rewind（回到） our code to the following:
     
     ```python
     import re
@@ -304,7 +304,7 @@
     
 - Therefore, we can change our code as follows.
     
-    ```
+    ```python
     import re
     
     email = input("What's your email? ").strip()
@@ -321,7 +321,7 @@
 - Since there is an additional `.`, the program considers this invalid.
 - It turns out that we can, looking at our vocabulary from before, we can group together ideas.
     
-    ```
+    ```python
     A|B     either A or B
     (...)   a group
     (?:...) non-caputuring version
@@ -329,7 +329,7 @@
     
 - We can modify our code as follows:
     
-    ```
+    ```python
     import re
     
     email = input("What's your email? ").strip()
@@ -344,7 +344,7 @@
     
 - Interestingly enough, the edits we have done so far to our code do not fully encompass all the checking that could be done to ensure a valid email address. Indeed, here is the full expression that one would have to type to ensure that a valid email is inputted:
     
-    ```
+    ```python
     ^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
     ```
     
@@ -358,7 +358,7 @@
 - There are ways to clean up your data.
 - In the terminal window, type `code format.py`. Then, in the text-editor, code as follows:
     
-    ```
+    ```python
     name = input("What's your name? ").strip()
     print(f"hello, {name}")
     ```
@@ -367,10 +367,10 @@
     
 - Modify your code as follows.
     
-    ```
+    ```python
     name = input("What's your name? ").strip()
     if "," in name:
-        last, first = name.split(", ")
+        last, first = name.split(", ")  # 这里是逗号和空格
         name = f"{first} {last}"
     
     print(f"hello, {name}")
@@ -380,7 +380,7 @@
     
 - You might notice that typing in `Malan,David` with no space causes the compiler to throw an error. Since we now know some regular expression syntax, let’s apply that to our code:
     
-    ```
+    ```python
     import re
     
     name = input("What's your name? ").strip()
@@ -395,7 +395,7 @@
     
 - It just so happens that we can request specific groups back using `matches.group`. We can modify our code as follows:
     
-    ```
+    ```python
     import re
     
     name = input("What's your name? ").strip()
@@ -407,11 +407,11 @@
     print(f"hello, {name}")
     ```
     
-    Notice how, in this implementation, `group` is not plural (there is no `s`).
+    Notice how, in this implementation, `group` is not **plural**（复数） (there is no `s`).
     
-- Our code can be further tightened as follows:
+- Our code can be further **tightened**（加强） as follows:
     
-    ```
+    ```python
     import re
     
     name = input("What's your name? ").strip()
@@ -425,7 +425,7 @@
     
 - Recognize still that typing in `Malan,David` with no space will still break our code. Therefore, we can make the following modification:
     
-    ```
+    ```python
     import re
     
     name = input("What's your name? ").strip()
@@ -439,7 +439,7 @@
     
 - It is very common to utilize `re.search` as we have in the previous examples, where `matches` is on a line of code after. However, we can combine these statements:
     
-    ```
+    ```python
     import re
     
     name = input("What's your name? ").strip()
@@ -448,7 +448,7 @@
     print(f"hello, {name}")
     ```
     
-    Notice how we combine two lines of our code. The walrus `:=` operator assigns a value from right to left and allows us to ask a boolean question at the same time. Turn your head sideways and you’ll see why this is called a walrus operator.
+    Notice how we combine two lines of our code. The walrus `:=` operator（海象运算符，python3.8引入） assigns a value from right to left and allows us to ask a boolean question at the same time. Turn your head sideways and you’ll see why this is called a walrus operator.
     
 - You can learn more in Python’s documentation of [re](https://docs.python.org/3/library/re.html).
 
@@ -457,7 +457,7 @@
 - So far, we have validated the user’s input and cleaned up the user’s input.
 - Now, let’s extract some specific information from user input. In the terminal window, type `code twitter.py` and code as follows in the text editor window:
     
-    ```
+    ```python
     url = input("URL: ").strip()
     print(url)
     ```
@@ -466,7 +466,7 @@
     
 - You can imagine how we would simply be able to get rid of the beginning of the standard Twitter URL. We can attempt this as follows:
     
-    ```
+    ```python
     url = input("URL: ").strip()
     
     username = url.replace("https://twitter.com/", "")
@@ -477,7 +477,7 @@
     
 - What if the user simply typed `twitter.com` instead of including the `https://` and the like? You can imagine many scenarios where the user may input or neglect to input parts of the URL that would create strange output by this program. To improve this program, we can code as follows:
     
-    ```
+    ```python
     url = input("URL: ").strip()
     
     username = url.removeprefix("https://twitter.com/")
@@ -486,11 +486,11 @@
     
     Notice how we utilize the `removeprefix` method. This method will remove the beginning of a string.
     
-- Regular expressions simply allow us to succinctly express the patterns and goals.
+- Regular expressions simply allow us to **succinctly**（简洁地） express the patterns and goals.
 - Within the `re` library, there is a method called `sub`. This method allows us to substitute a pattern with something else.
 - The signature of the `sub` method is as follows
     
-    ```
+    ```python
     re.sub(pattern, repl, string, count=0, flags=0)
     ```
     
@@ -498,7 +498,7 @@
     
 - Implementing this method in our code, we can modify our program as follows:
     
-    ```
+    ```python
     import re
     
     url = input("URL: ").strip()
@@ -511,7 +511,7 @@
     
 - The protocol, subdomain, and the possibility that the user inputted any part of the URL after the username are all reasons that this code is still not ideal. We can further address these shortcomings as follows:
     
-    ```
+    ```python
     import re
     
     url = input("URL: ").strip()
@@ -525,7 +525,7 @@
 - Still, we are blindly expecting that what the user inputted a url that, indeed, has a username.
 - Using our knowledge of `re.search`, we can further improve our code.
     
-    ```
+    ```python
     import re
     
     url = input("URL: ").strip()
@@ -539,7 +539,7 @@
     
 - Even further tightening up our program, we can utilize our `:=` operator as follows:
     
-    ```
+    ```python
     import re
     
     url = input("URL: ").strip()
@@ -552,7 +552,7 @@
     
 - Still, we can be more explicit to ensure that the username inputted is correct. Using Twitter’s documentation, we can add the following to our regular expression:
     
-    ```
+    ```python
     import re
     
     url = input("URL: ").strip()
