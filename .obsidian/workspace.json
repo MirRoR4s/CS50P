@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "da0de1ed5211c300",
+        "id": "20162a8a848f6386",
         "type": "tabs",
         "children": [
           {
-            "id": "e5737eeaf576837f",
+            "id": "02c5e5ab70ebc7ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS50P/Week6/README.md",
+                "file": "CS50P/Week7/problem-set.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 297.5
   },
   "right": {
     "id": "bde9eb47aa76f474",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS50P/Week6/README.md",
+                "file": "CS50P/Week7/problem-set.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS50P/Week6/README.md",
+                "file": "CS50P/Week7/problem-set.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS50P/Week6/README.md"
+                "file": "CS50P/Week7/problem-set.md"
               }
             }
           }
@@ -148,8 +147,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e5737eeaf576837f",
+  "active": "02c5e5ab70ebc7ee",
   "lastOpenFiles": [
+    "CS50P/Week7/Lecture7.md",
+    "CS50P/Week7/problem-set.md",
     "CS50P/Week6/README.md",
     "CS50P/Week6/costumes.gif",
     "CS50P/Week3/problem-set.md",
