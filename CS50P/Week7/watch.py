@@ -5,10 +5,14 @@ def main():
     print(parse(input("HTML: ")))
 
 def parse(s):
-    pattern = r"\"https?://w{3}?\.?youtube\.com/embed/(.*)\""
-    ans = re.search(pattern, s).groups()
+    """
+    <iframe src="http://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
+
+    """
+    pattern = r"\"https?://(w{3})?\.?youtube\.com/embed/(.*?)\""
+    ans = re.search(pattern, s)
     
-    return ans[0] if ans is not None else None
+    return f"https://youtu.be/{ans.groups()[1]}" if ans is not None else None
 
 
 
