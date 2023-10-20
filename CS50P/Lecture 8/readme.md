@@ -1,33 +1,35 @@
-# [第8讲](https://cs50.harvard.edu/python/2022/notes/8/#lecture-8)
+# [Lecture 8](https://cs50.harvard.edu/python/2022/notes/8/#lecture-8)
 
-- [面向对象编程](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)
-- [课程](https://cs50.harvard.edu/python/2022/notes/8/#classes)
+- [Object-Oriented Programming](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)
+- [Classes](https://cs50.harvard.edu/python/2022/notes/8/#classes)
 - [`raise`](https://cs50.harvard.edu/python/2022/notes/8/#raise)
-- [装饰器](https://cs50.harvard.edu/python/2022/notes/8/#decorators)
-- [连接到本课程之前的工作](https://cs50.harvard.edu/python/2022/notes/8/#connecting-to-previous-work-in-this-course)
-- [类方法](https://cs50.harvard.edu/python/2022/notes/8/#class-methods)
-- [静态方法](https://cs50.harvard.edu/python/2022/notes/8/#static-methods)
-- [遗产](https://cs50.harvard.edu/python/2022/notes/8/#inheritance)
-- [继承和例外](https://cs50.harvard.edu/python/2022/notes/8/#inheritance-and-exceptions)
-- [运算符重载](https://cs50.harvard.edu/python/2022/notes/8/#operator-overloading)
-- [加起来](https://cs50.harvard.edu/python/2022/notes/8/#summing-up)
+- [Decorators](https://cs50.harvard.edu/python/2022/notes/8/#decorators)
+- [Connecting to Previous Work in this Course](https://cs50.harvard.edu/python/2022/notes/8/#connecting-to-previous-work-in-this-course)
+- [Class Methods](https://cs50.harvard.edu/python/2022/notes/8/#class-methods)
+- [Static Methods](https://cs50.harvard.edu/python/2022/notes/8/#static-methods)
+- [Inheritance](https://cs50.harvard.edu/python/2022/notes/8/#inheritance)
+- [Inheritance and Exceptions](https://cs50.harvard.edu/python/2022/notes/8/#inheritance-and-exceptions)
+- [Operator Overloading](https://cs50.harvard.edu/python/2022/notes/8/#operator-overloading)
+- [Summing Up](https://cs50.harvard.edu/python/2022/notes/8/#summing-up)
 
-## 面向对象编程
+## [Object-Oriented Programming](https://cs50.harvard.edu/python/2022/notes/8/#object-oriented-programming)
 
-- 有很多不同的编程范式。当您学习其他语言时，您将开始识别类似的模式。
-- 到目前为止，你已按部就班地完成了一系列的学习。
-- 面向对象编程（OOP）是解决编程相关问题的一种引人注目的解决方案。
-- 为了开始今天的课程，输入`code student.py`并在终端窗口中键入以下代码：
-
-    ```python
+- There are different paradigms of programming. As you learn other languages, you will start recognizing patterns like these.
+- Up until this point, you have worked procedurally step-by-step.
+- Object-oriented programming (OOP) is a compelling solution to programming-related problems.
+- To begin, type `code student.py` in the terminal window and code as follows:
+    
+    ```
     name = input("Name: ")
     house = input("House: ")
     print(f"{name} from {house}")
     ```
-请注意，该程序遵循程序化、逐步的范例：与您在本课程的前面部分中看到的程序类似。
-
-- 根据前几周的工作，我们可以创建函数来抽象出该程序的某些部分。
-    ```python
+    
+    Notice that this program follows a procedural, step-by-step paradigm: Much like you have seen in prior parts of this course.
+    
+- Drawing on our work from previous weeks, we can create functions to abstract away parts of this program.
+    
+    ```
     def main():
         name = get_name()
         house = get_house()
@@ -45,11 +47,12 @@
     if __name__ == "__main__":
         main()
     ```
- 
-注意`get_name` 和 `get_house`是怎样抽象出我们 `main` 函数的一些需求。此外，请注意上面代码的最后几行告诉编译器如何运行该`main`函数。
- 
-- 我们可以通过将 `students` 以 `tuple` 类型存储来简化代码。 `tuple` 是一个值序列。与 `list` 不同的是， `tuple`不能被修改。在下面 `get_student()` 中我们返回两个值。
-    ```python
+    
+    Notice how `get_name` and `get_house` abstract away some of the needs of our `main` function. Further, notice how the final lines of the code above tell the compiler to run the `main` function.
+    
+- We can further simplify our program by storing the student as a `tuple`. A `tuple` is a sequences of values. Unlike a `list`, a `tuple` can’t be modified. In spirit, we are returning two values.
+    
+    ```
     def main():
         name, house = get_student()
         print(f"{name} from {house}")
@@ -64,11 +67,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-    注意`get_student`返回`name, house`.
-
-- 对 name 和 house 组成的 tuple 进行打包，以便我们能够将这两个变量返回到名为 `student` 的变量中。我们可以按如下方式修改我们的代码。
-    ```python
+    
+    Notice how `get_student` returns `name, house`.
+    
+- Packing that `tuple`, such that we are able to return both items to a variable called `student`, we can modify our code as follows.
+    
+    ```
     def main():
         student = get_student()
         print(f"{student[0]} from {student[1]}")
@@ -84,9 +88,11 @@
         main()
     ```
     
-    请注意，`(name, house)`明确告诉任何阅读我们代码的人我们正在返回一个 tuple 内的两个值。此外，请注意我们使用了`student[0]`、`student[1]`对 student 进行索引。
-- `tuple`是不可变的，这意味着我们无法修改元组中的值。不变性是我们防御性编程的一种方式。
-```python
+    Notice that `(name, house)` explicitly tells anyone reading our code that we are returning two values within one. Further, notice how we can index into `tuple`s using `student[0]` or `student[1]`.
+    
+- `tuple`s are immutable, meaning we cannot change those values. Immutability is a way by which we can program defensively.
+    
+    ```
     def main():
         student = get_student()
         if student[0] == "Padma":
@@ -103,10 +109,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-上述代码会产生错误。由于`tuple`是不可变的，所以无法重新分配`student[1]` 的值。
-- 如果想为其他程序员提供灵活性，我们可以使用 `list`。具体如下所示：
-```python
+    
+    Notice that this code produces an error. Since `tuple`s are immutable, we’re not able to reassign the value of `student[1]`.
+    
+- If we wanted to provide our fellow programmers flexibility, we could utilize a `list` as follows.
+    
+    ```
     def main():
         student = get_student()
         if student[0] == "Padma":
@@ -123,11 +131,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-请注意，列表是可变的。所以程序员可以对换 name 和 house 的顺序。在某些情况下，可能会决定使用此功能，以牺牲代码的安全性为代价提供更大的灵活性。毕竟，如果这些值的顺序是可变的，那么与您一起工作的程序员可能会在以后犯错误。
-
-还可以利用字典实现上述的代码。回忆一下，字典能为我们提供键值对。
-```python
+    
+    Note the lists are mutable. That is, the order of `house` and `name` can be switched by a programmer. You might decide to utilize this in some cases where you want to provide more flexibility at the cost of the security of your code. After all, if the order of those values is changeable, programmers that work with you could make mistakes down the road.
+    
+- A dictionary could also be utilized in this implementation. Recall that dictionaries provide a key-value pair.
+    
+    ```
     def main():
         student = get_student()
         print(f"{student['name']} from {student['house']}")
@@ -143,12 +152,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-请注意，在这种情况下，将返回两个键值对。这种方法的一个优点是我们可以使用键索引该字典。
-
-尽管如此，还可以进一步改进我们的代码。注意到有一个不需要的变量。我们可以删除 `student = {}` 因为我们不需要创建一个空字典。
-
-```python
+    
+    Notice in this case, two key-value pairs are returned. An advantage of this approach is that we can index into this dictionary using the keys.
+    
+- Still, our code can be further improved. Notice that there is an unneeded variable. We can remove `student = {}` because we don’t need to create an empty dictionary.
+    
+    ```
     def main():
         student = get_student()
         print(f"{student['name']} from {student['house']}")
@@ -163,12 +172,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-请注意，我们可以在`return`语句中使用大括号来创建字典并在同一行中将其全部返回。
-
-我们可以在代码的字典版本中提供 Padma 的特殊情况。
-
-```python
+    
+    Notice we can utilize `{}` braces in the `return` statement to create the dictionary and return it all in the same line.
+    
+- We can provide our special case with Padma in our dictionary version of our code.
+    
+    ```
     def main():
         student = get_student()
         if student["name"] == "Padma":
@@ -185,16 +194,17 @@
     if __name__ == "__main__":
         main()
     ```
+    
+    Notice how, similar in spirit to our previous iterations of this code, we can utilize the key names to index into our student dictionary.
+    
 
-请注意，与我们之前对该代码的迭代类似，我们可以如何利用键名称来索引到我们的学生词典中。
+## [Classes](https://cs50.harvard.edu/python/2022/notes/8/#classes)
 
-## Classes
-
-- 在面向对象编程中，通过类我们可以创建自己的数据类型，并为它们命名。
-- 类就像数据类型的模具——我们可以在其中发明自己的数据类型并给它们命名。
-- 我们可以如下修改代码来实现我们自己的类`Student`：
-
-```python
+- Classes are a way by which, in object-oriented programming, we can create our own type of data and give them names.
+- A class is like a mold for a type of data – where we can invent our own data type and give them a name.
+- We can modify our code as follows to implement our own class called `Student`:
+    
+    ```
     class Student:
         ...
     
@@ -214,13 +224,13 @@
     if __name__ == "__main__":
         main()
     ```
-
-注意，按照惯例 `Student` 要大写。此外，注意 `...` 意味着我们稍后将返回来完成这部分代码。此外，请注意，在 中`get_student`，我们可以使用语法  `student = Student()` 来创建一个 Student 类的 student。此外，请注意，我们使用“点符号”来访问 Student 类的 student 属性。
-
-每当您创建一个类并利用该蓝图来创建某些东西时，您就创建了所谓的“对象”或“实例”。在我们的代码中，`student`就是一个对象。
-
-继续完善代码，这一次在类中定义两个属性，在后续创建类的实例时，也需要传入两个变量。
-```python
+    
+    Notice by convention that `Student` is capitalized. Further, notice the `...` simply means that we will later return to finish that portion of our code. Further, notice that in `get_student`, we can create a `student` of class `Student` using the syntax `student = Student()`. Further, notice that we utilize “dot notation” to access attributes of this variable `student` of class `Student`.
+    
+- Any time you create a class and you utilize that blueprint to create something, you create what is called an “object” or an “instance”. In the case of our code, `student` is an object.
+- Further, we can lay some groundwork for the attributes that are expected inside an object whose class is `Student`. We can modify our code as follows:
+    
+    ```
     class Student:
         def __init__(self, name, house):
             self.name = name
@@ -242,11 +252,12 @@
     if __name__ == "__main__":
         main()
     ```
-
-请注意，在 `Student`，我们标准化了此类的属性。我们可以在 中创建一个`class Student`称为“方法”的函数，它确定类 的对象的行为`Student`。在此函数中，它接受`name`传递`house`给它的 和 并将这些变量分配给该对象。此外，请注意构造函数如何`student = Student(name, house)`在类中调用此函数`Student`并创建一个`student`. `self`指的是刚刚创建的当前对象。
-
-- 我们可以将代码简化如下：
-```python
+    
+    Notice that within `Student`, we standardize the attributes of this class. We can create a function within `class Student`, called a “method”, that determines the behavior of an object of class `Student`. Within this function, it takes the `name` and `house` passed to it and assigns these variables to this object. Further, notice how the constructor `student = Student(name, house)` calls this function within the `Student` class and creates a `student`. `self` refers to the current object that was just created.
+    
+- We can simplify our code as follows:
+    
+    ```
     class Student:
         def __init__(self, name, house):
             self.name = name
@@ -268,13 +279,13 @@
         main()
     ```
     
-    请注意如何`return Student(name, house)`简化我们代码的先前迭代，其中构造函数语句在其自己的行上运行。
+    Notice how `return Student(name, house)` simplifies the previous iteration of our code where the constructor statement was run on its own line.
     
-- 您可以在 Python 的[类](https://docs.python.org/3/tutorial/classes.html)文档中了解更多信息。
+- You can learn more in Python’s documentation of [classes](https://docs.python.org/3/tutorial/classes.html).
 
 ## [`raise`](https://cs50.harvard.edu/python/2022/notes/8/#raise)
 
-- 面向对象的程序鼓励您将类的所有功能封装在类定义中。如果事情不顺利怎么办？如果有人尝试随机输入内容怎么办？如果有人试图创建一个没有名字的学生怎么办？修改您的代码如下：
+- Object-oriented program encourages you to encapusulate all the functionality of a class within the class definition. What if something goes wrong? What if someone tries to type in something random? What if someone tries to create a student without a name? Modify your code as follows:
     
     ```
     class Student:
@@ -302,9 +313,9 @@
         main()
     ```
     
-    请注意我们现在如何检查是否提供了名称并指定了合适的房屋。事实证明，我们可以创建自己的异常，以提醒程序员注意由名为 的用户创建的潜在错误`raise`。在上面的例子中，我们提出了`ValueError`一条特定的错误消息。
+    Notice how we check now that a name is provided and a proper house is designated. It turns out we can create our own exceptions that alerts the programmer to a potential error created by the user called `raise`. In the case above, we raise `ValueError` with a specific error message.
     
-- 碰巧的是，Python 允许您创建一个特定的函数，通过该函数可以打印对象的属性。修改您的代码如下：
+- It just so happens that Python allows you to create a specific function by which you can print the attributes of an object. Modify your code as follows:
     
     ```
     class Student:
@@ -337,9 +348,9 @@
         main()
     ```
     
-    请注意如何`def __str__(self)`提供学生在被呼叫时返回的方法。因此，作为程序员，您现在可以打印对象、其属性或几乎任何您想要与该对象相关的内容。
+    Notice how `def __str__(self)` provides a means by which a student is returned when called. Therefore, you can now, as the programmer, print an object, its attributes, or almost anything you desire related to that object.
     
-- `__str__`是Python类附带的内置方法。碰巧我们也可以为类创建我们自己的方法！修改您的代码如下：
+- `__str__` is a built-in method that comes with Python classes. It just so happens that we can create our own methods for a class as well! Modify your code as follows:
     
     ```
     class Student:
@@ -386,9 +397,9 @@
         main()
     ```
     
-    注意我们如何定义我们自己的方法`charm`。与字典不同，类可以具有称为方法的内置函数。在这种情况下，我们定义我们的`charm`方法，其中特定情况有特定结果。此外，请注意 Python 能够直接在我们的代码中使用表情符号。
+    Notice how we define our own method `charm`. Unlike dictionaries, classes can have built-in functions called methods. In this case, we define our `charm` method where specific cases have specific results. Further, notice that Python has the ability to utilize emojis directly in our code.
     
-- 在继续之前，让我们删除我们的守护神代码。修改您的代码如下：
+- Before moving forward, let us remove our patronus code. Modify your code as follows:
     
     ```
     class Student:
@@ -420,13 +431,14 @@
         main()
     ```
     
-    请注意我们只有两个方法：`__init__`和`__str__`。
+    Notice how we have only two methods: `__init__` and `__str__`.
     
 
-## [装饰器](https://cs50.harvard.edu/python/2022/notes/8/#decorators)
+## [Decorators](https://cs50.harvard.edu/python/2022/notes/8/#decorators)
 
-可以利用属性来加固代码，在 Python 中，通过使用装饰器函数来做到这一点。装饰器函数以 `@` 开头，具体代码如下：
-```python
+- Properties can be utilized to harden our code. In Python, we define properties using function “decorators”, which begin with `@`. Modify your code as follows:
+    
+    ```
     class Student:
         def __init__(self, name, house):
             if not name:
@@ -464,8 +476,10 @@
     if __name__ == "__main__":
         main()
     ```
-
-- 除了房子的名称外，我们还可以保护学生的姓名。修改您的代码如下：
+    
+    Notice how we’ve written `@property` above a function called `house`. Doing so defines `house` as a property of our class. With `house` as a property, we gain the ability to define how some attribute of our class, `_house`, should be set and retrieved. Indeed, we can now define a function called a “setter”, via `@house.setter`, which will be called whenever the house property is set—for example, with `student.house = "Gryffindor"`. Here, we’ve made our setter validate values of `house` for us. Notice how we raise a `ValueError` if the value of `house` is not any of the Harry Potter houses, otherwise, we’ll use `house` to update the value of `_house`. Why `_house` and not `house`? `house` is a property of our class, with functions via which a user attempts to set our class attribute. `_house` is that class attribute itself. The leading underscore, `_`, indicates to users they need not (and indeed, shouldn’t!) modify this value directly. `_house` should _only_ be set through the `house` setter. Notice how the `house` property simply returns that value of `_house`, our class attribute that has presumably been validated using our `house` setter. When a user calls `student.house`, they’re getting the value of `_house` through our `house` “getter”.
+    
+- In addition to the name of the house, we can protect the name of our student as well. Modify your code as follows:
     
     ```
     class Student:
@@ -514,71 +528,71 @@
         main()
     ```
     
-    请注意，与前面的代码非常相似，我们为名称提供了 getter 和 setter。
+    Notice how, much like the previous code, we provide a getter and setter for the name.
     
-- 您可以在 Python 的[方法](https://docs.python.org/3/tutorial/classes.html)文档中了解更多信息。
+- You can learn more in Python’s documentation of [methods](https://docs.python.org/3/tutorial/classes.html).
 
-## [连接到本课程之前的工作](https://cs50.harvard.edu/python/2022/notes/8/#connecting-to-previous-work-in-this-course)
+## [Connecting to Previous Work in this Course](https://cs50.harvard.edu/python/2022/notes/8/#connecting-to-previous-work-in-this-course)
 
-- 尽管在本课程的过去部分中没有明确说明，但您自始至终都在使用类和对象。
-- 如果您深入研究 的文档`int`，您会发现它是一个带有构造函数的类。它是创建 类型对象的蓝图`int`。您可以在 Python 的 文档中了解更多信息[`int`](https://docs.python.org/3/library/functions.html#int)。
-- 字符串也是一个类。如果您使用了`str.lower()`，则您正在使用类中的方法`str`。您可以在 Python 的 文档中了解更多信息[`str`](https://docs.python.org/3/library/stdtypes.html#str)。
-- `list`也是一个类。查看 的文档`list`，您可以看到其中包含的方法，例如`list.append()`. 您可以在 Python 的 文档中了解更多信息[`list`](https://docs.python.org/3/library/stdtypes.html#list)。
-- `dict`也是Python中的一个类。您可以在 Python 的 文档中了解更多信息[`dict`](https://docs.python.org/3/library/stdtypes.html#dict)。
-- 要了解您一直以来如何使用类，请转到控制台并键入`code type.py`，然后编写如下代码：
+- While not explicitly stated in past portions of this course, you have been using classes and objects the whole way through.
+- If you dig into the documentation of `int`, you’ll see that it is a class with a constructor. It’s a blueprint for creating objects of type `int`. You can learn more in Python’s documentation of [`int`](https://docs.python.org/3/library/functions.html#int).
+- Strings too are also a class. If you have used `str.lower()`, you were using a method that came within the `str` class. You can learn more in Python’s documentation of [`str`](https://docs.python.org/3/library/stdtypes.html#str).
+- `list` is also a class. Looking at that documentation for `list`, you can see the methods that are contained therein, like `list.append()`. You can learn more in Python’s documentation of [`list`](https://docs.python.org/3/library/stdtypes.html#list).
+- `dict` is also a class within Python. You can learn more in Python’s documentation of [`dict`](https://docs.python.org/3/library/stdtypes.html#dict).
+- To see how you have been using classes all along, go to your console and type `code type.py` and then code as follows:
     
     ```
     print(type(50))
     ```
     
-    请注意，通过执行此代码，它将显示 的类`50`是`int`。
+    Notice how by executing this code, it will display that the class of `50` is `int`.
     
-- 我们还可以将其应用到`str`以下方面：
+- We can also apply this to `str` as follows:
     
     ```
     print(type("hello, world"))
     ```
     
-    请注意执行此代码将如何表明它属于该类`str`。
+    Notice how executing this code will indicate this is of the class `str`.
     
-- 我们还可以将其应用到`list`以下方面：
+- We can also apply this to `list` as follows:
     
     ```
     print(type([]))
     ```
     
-    请注意执行此代码将如何表明它属于该类`list`。
+    Notice how executing this code will indicate this is of the class `list`.
     
-- 我们还可以将其应用于`list`使用 Python 内置`list`类的名称，如下所示：
+- We can also apply this to a `list` using the name of Python’s built-in `list` class as follows:
     
     ```
     print(type(list()))
     ```
     
-    请注意执行此代码将如何表明它属于该类`list`。
+    Notice how executing this code will indicate this is of the class `list`.
     
-- 我们还可以将其应用到`dict`以下方面：
+- We can also apply this to `dict` as follows:
     
     ```
     print(type({}))
     ```
     
-    请注意执行此代码将如何表明它属于该类`dict`。
+    Notice how executing this code will indicate this is of the class `dict`.
     
-- 我们还可以将其应用于`dict`使用 Python 内置类的名称，`dict`如下所示：
+- We can also apply this to a `dict` using the name of Python’s built in `dict` class as follows:
     
     ```
     print(type(dict()))
     ```
     
-    请注意执行此代码将如何表明它属于该类`dict`。
+    Notice how executing this code will indicate this is of the class `dict`.
     
 
-## [类方法](https://cs50.harvard.edu/python/2022/notes/8/#class-methods)
+## [Class Methods](https://cs50.harvard.edu/python/2022/notes/8/#class-methods)
 
-- 有时，我们想向类本身添加功能，而不是向该类的实例添加功能。
-- `@classmethod`是一个函数，我们可以使用它向整个类添加功能。
-- _这是不_使用类方法的示例。在终端窗口中，键入`code hat.py`并编码如下：
+- Sometimes, we want to add functionality to a class itself, not to instances of that class.
+- `@classmethod` is a function that we can use to add functionality to a class as a whole.
+- Here’s an example of _not_ using a class method. In your terminal window, type `code hat.py` and code as follows:
     
     ```
     import random
@@ -596,9 +610,9 @@
     hat.sort("Harry")
     ```
     
-    请注意，当我们将学生的姓名传递给分院帽时，它会告诉我们哪个学院分配给了该学生。请注意，`hat = Hat()`实例化了一个`hat`. 功能始终由类的_实例_`sort`处理。通过执行，我们将学生的姓名传递给我们所调用的特定实例的方法。`Hat``hat.sort("Harry")``sort``Hat``hat`
+    Notice how when we pass the name of the student to the sorting hat, it will tell us what house is assigned to the student. Notice that `hat = Hat()` instantiates a `hat`. The `sort` functionality is always handled by the _instance_ of the class `Hat`. By executing `hat.sort("Harry")`, we pass the name of the student to the `sort` method of the particular instance of `Hat`, which we’ve called `hat`.
     
-- 不过，我们可能希望在不创建排序帽的特定实例的情况下运行该`sort`函数（毕竟只有一个！）。我们可以修改我们的代码如下：
+- We may want, though, to run the `sort` function without creating a particular instance of the sorting hat (there’s only one, after all!). We can modify our code as follows:
     
     ```
     import random
@@ -616,9 +630,9 @@
     Hat.sort("Harry")
     ```
     
-    请注意如何`__init__`删除该方法，因为我们不需要在代码中的任何位置实例化帽子。`self`因此，不再相关并被删除。我们将其指定`sort`为 a `@classmethod`，替换`self`为`cls`。最后，请注意`Hat`这段代码末尾附近如何按照约定大写，因为这是我们类的名称。
+    Notice how the `__init__` method is removed because we don’t need to instantiate a hat anywhere in our code. `self`, therefore, is no longer relevant and is removed. We specify this `sort` as a `@classmethod`, replacing `self` with `cls`. Finally, notice how `Hat` is capitalized by convention near the end of this code, because this is the name of our class.
     
-- 回到`students.py`我们可以修改我们的代码如下，解决一些与`@classmethod`s 相关的错过的机会：
+- Returning back to `students.py` we can modify our code as follows, addressing some missed opportunities related to `@classmethod`s:
     
     ```
     class Student:
@@ -645,19 +659,19 @@
         main()
     ```
     
-    请注意，它`get_student`已被删除并创建了一个`@classmethod`调用。`get`现在无需先创建学生即可调用此方法。
+    Notice that `get_student` is removed and a `@classmethod` called `get` is created. This method can now be called without having to create a student first.
     
 
-## [静态方法](https://cs50.harvard.edu/python/2022/notes/8/#static-methods)
+## [Static Methods](https://cs50.harvard.edu/python/2022/notes/8/#static-methods)
 
-- 事实证明，除了`@classmethod`与实例方法不同的 s 之外，还有其他类型的方法。
-- 使用`@staticmethod`可能是您可能希望探索的东西。虽然本课程没有明确介绍，但欢迎您去了解有关静态方法及其与类方法的区别的更多信息。
+- It turns out that besides `@classmethod`s, which are distinct from instance methods, there are other types of methods as well.
+- Using `@staticmethod` may be something you might wish to explore. While not covered explicitly in this course, you are welcome to go and learn more about static methods and their distinction from class methods.
 
-## [遗产](https://cs50.harvard.edu/python/2022/notes/8/#inheritance)
+## [Inheritance](https://cs50.harvard.edu/python/2022/notes/8/#inheritance)
 
-- 继承也许是面向对象编程最强大的功能。
-- 碰巧您可以创建一个类，“继承”另一个类的方法、变量和属性。
-- 在终端中，执行`code wizard.py`. 代码如下：
+- Inheritance is, perhaps, the most powerful feature of object-oriented programming.
+- It just so happens that you can create a class that “inherits” methods, variables, and attributes from another class.
+- In the terminal, execute `code wizard.py`. Code as follows:
     
     ```
     class Wizard:
@@ -691,13 +705,13 @@
     ...
     ```
     
-    请注意，上面有一个名为 的类`Wizard`，还有一个名为 的类`Student`。此外，请注意有一个名为 的类`Professor`。学生和教授都有名字。而且，学生和教授都是巫师。因此， 和`Student`都`Professor`继承了 的特点`Wizard`。在“子”类中`Student`，`Student`可以继承“父”或“超”类`Wizard`作为行`super().__init__(name)`运行`init`的方法`Wizard`。最后，请注意此代码的最后几行创建了一个名为 Albus 的向导、一个名为 Harry 的学生，等等。
+    Notice that there is a class above called `Wizard` and a class called `Student`. Further, notice that there is a class called `Professor`. Both students and professors have names. Also, both students and professors are wizards. Therefore, both `Student` and `Professor` inherit the characteristics of `Wizard`. Within the “child” class `Student`, `Student` can inherit from the “parent” or “super” class `Wizard` as the line `super().__init__(name)` runs the `init` method of `Wizard`. Finally, notice that the last lines of this code create a wizard called Albus, a student called Harry, and so on.
     
 
-## [继承和例外](https://cs50.harvard.edu/python/2022/notes/8/#inheritance-and-exceptions)
+## [Inheritance and Exceptions](https://cs50.harvard.edu/python/2022/notes/8/#inheritance-and-exceptions)
 
-- 虽然我们刚刚介绍了继承，但我们在使用异常的过程中一直在使用继承。
-- 碰巧的是，例外情况出现在层次结构中，其中有子类、父类和祖父母类。如下图所示：
+- While we have just introduced inheritance, we have been using this all along during our use of exceptions.
+- It just so happens that exceptions come in a heirarchy, where there are children, parent, and grandparent classes. These are illustrated below:
     
     ```
     BaseException
@@ -719,12 +733,12 @@
      ...
     ```
     
-- 您可以在 Python 的[异常](https://docs.python.org/3/library/exceptions.html)文档中了解更多信息。
+- You can learn more in Python’s documentation of [exceptions](https://docs.python.org/3/library/exceptions.html).
 
-## [运算符重载](https://cs50.harvard.edu/python/2022/notes/8/#operator-overloading)
+## [Operator Overloading](https://cs50.harvard.edu/python/2022/notes/8/#operator-overloading)
 
-- 一些运算符（例如`+`和 ）`-`可以“重载”，这样它们就可以具有除简单算术之外的更多功能。
-- 在终端窗口中，输入`code vault.py`。然后，代码如下：
+- Some operators such as `+` and `-` can be “overloaded” such that they can have more abilities beyond simple arithmetic.
+- In your terminal window, type `code vault.py`. Then, code as follows:
     
     ```
     class Vault:
@@ -753,18 +767,18 @@
     print(total)
     ```
     
-    请注意该方法如何`__str__`返回格式化字符串。此外，请注意该方法如何`__add__`允许将两个保管库的值相加。`self`是操作数左边的内容`+`。`other`才是正确的`+`。
+    Notice how the `__str__` method returns a formatted string. Further, notice how the `__add__` method allows for the addition of the values of two vaults. `self` is what is on the left of the `+` operand. `other` is what is right of the `+`.
     
-- [您可以在 Python 的运算符重载](https://docs.python.org/3/reference/datamodel.html#special-method-names)文档中了解更多信息。
+- You can learn more in Python’s documentation of [operator overloading](https://docs.python.org/3/reference/datamodel.html#special-method-names).
 
-## [加起来](https://cs50.harvard.edu/python/2022/notes/8/#summing-up)
+## [Summing Up](https://cs50.harvard.edu/python/2022/notes/8/#summing-up)
 
-现在，您已经通过面向对象编程学到了全新的能力水平。
+Now, you’ve learned a whole new level of capability through object-oriented programming.
 
-- 面向对象编程
-- 课程
+- Object-oriented programming
+- Classes
 - `raise`
-- 类方法
-- 静态方法
-- 遗产
-- 运算符重载
+- Class Methods
+- Static Methods
+- Inheritance
+- Operator Overloading
