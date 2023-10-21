@@ -4,29 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "20162a8a848f6386",
-        "type": "tabs",
-        "dimension": 79.34648581997534,
-        "children": [
-          {
-            "id": "02c5e5ab70ebc7ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CS50P/CS50P.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "c11a2868d23e26db"
-          }
-        ]
-      },
-      {
         "id": "5888da3b47a483f9",
         "type": "tabs",
-        "dimension": 20.65351418002466,
         "children": [
           {
             "id": "dcc54935ac895c39",
@@ -34,10 +13,40 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS50P/CS50P.md"
+                "file": "CS50P/week9/notes/readme.md"
               }
-            },
-            "group": "c11a2868d23e26db"
+            }
+          },
+          {
+            "id": "212c690fe270de2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS50P/week9/notes/readme.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "8871673f6503e867",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9866e3d950511701",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CS50P/week9/notes/readme.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -89,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 280.5,
+    "collapsed": true
   },
   "right": {
     "id": "bde9eb47aa76f474",
@@ -105,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS50P/CS50P.md",
+                "file": "CS50P/week9/notes/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CS50P/CS50P.md",
+                "file": "CS50P/week9/notes/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CS50P/CS50P.md"
+                "file": "CS50P/week9/notes/readme.md"
               }
             }
           }
@@ -167,13 +177,23 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dcc54935ac895c39",
+  "active": "9866e3d950511701",
   "lastOpenFiles": [
+    "CS50P/Week8/Problem Set 8/Seasons of Love/test.py.md",
+    "CS50P/Week8/Problem Set 8/Seasons of Love/readme.md",
+    "CS50P/Week8/Problem Set 8/readme.md",
+    "CS50P/Week8/Problem Set 8/Seasons of Love/Seasons of Love",
+    "CS50P/Week8/Problem Set 8/Seasons of Love",
+    "CS50P/Week8/readme.md",
+    "CS50P/Week8/Problem Set 8",
+    "README.md",
+    "CS50P/Week8/notes/readme.md",
+    "CS50P/CS50P.md",
+    "image.png",
     "CS50P/Week7/working/test_working.py",
     "CS50P/Week7/working/working.py",
     "CS50P/Week7/working",
     "CS50P/Lecture 8/readme.md",
-    "CS50P/CS50P.md",
     "CS50P/Week7/Lecture7.md",
     "CS50P/Week7/problem-set.md",
     "CS50P/Week6/README.md",
@@ -184,7 +204,6 @@
     "CS50P/Lecture 4/Problem Set 4.md",
     "CS50P/Lecture 5/readme.md",
     "CS50P/Lecture 5/问题集5.md",
-    "README.md",
     "CS50P/Lecture 6/readme.md",
     "CS50P/Lecture 9/常量.md",
     "CS50P/Lecture 6",
@@ -200,8 +219,6 @@
     "CS50P/Lecture 9",
     "CS50P/Lecture 8/类方法.md",
     "CS50P/Lecture 8/运算符重载.md",
-    "CS50P/Lecture 8/装饰器.md",
-    "CS50P/Lecture 8/images",
     "CS50P/Lecture 8/images/Pasted image 20231010193419.png"
   ]
 }

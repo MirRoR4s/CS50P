@@ -8,6 +8,6 @@
   },
   "attachmentFolderPath": "./images",
   "readableLineLength": false,
-  "showLineNumber": true,
+  "showLineNumber": false,
   "rightToLeft": false
 }
